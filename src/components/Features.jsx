@@ -38,8 +38,14 @@ function Features() {
                     </div>
                   </div>
 
-                  <div className="w-16 rounded-full bg-custom-black-100 text-white">
-                    <button>1+2</button>
+                  <div className="flex w-[85px] items-center justify-around rounded-2xl bg-custom-black-100 px-1 py-[3px] text-white">
+                    <button className="w-[24px] self-stretch rounded-full bg-primary-color text-custom-black-50">
+                      -
+                    </button>
+                    <span>1</span>
+                    <button className="w-[24px] rounded-full bg-primary-color pb-[2px] text-custom-black-50">
+                      +
+                    </button>
                   </div>
                 </div>
 
@@ -82,7 +88,7 @@ function Features() {
                 zoom={15}
                 scrollWheelZoom={true}
                 className="z-0"
-                style={{ height: "100%", width: "100%" }}
+                style={{ height: "100%", width: "100%", borderRadius: "8px" }}
               >
                 <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

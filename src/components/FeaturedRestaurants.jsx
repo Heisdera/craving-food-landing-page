@@ -17,7 +17,7 @@ function FeaturedRestaurants() {
     <section className="mx-auto max-w-[1225px] bg-primary-color px-4 py-12 sm:px-7">
       <div className="flex items-center justify-between pb-6">
         <h2 className="w-[50%] text-xl font-extrabold lg:w-[15%]">
-          Our featured restaurant
+          Our featured restaurant <span className="md:hidden">dishes</span>
         </h2>
         <p className="hidden w-[30%] text-[12px] lg:!block">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quibusdam
@@ -26,7 +26,7 @@ function FeaturedRestaurants() {
         </p>
 
         <button
-          className={`rounded-full border border-[#d0ff00e8] px-5 py-1 text-[13px] text-yellow-400 ${!isCollapsed && "border-[#ff8800e8] bg-white text-red-400"} whitespace-nowrap hover:bg-white`}
+          className={`rounded-full border border-[#d0ff00e8] px-5 py-1 text-[13px] text-yellow-400 ${!isCollapsed && "border-[#ff8800e8] bg-white text-red-400"} whitespace-nowrap font-medium hover:bg-white`}
           onClick={handleCollapse}
         >
           {isCollapsed ? "View all" : "View less"}
