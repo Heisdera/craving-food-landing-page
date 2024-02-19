@@ -35,7 +35,7 @@ export default {
         },
       },
       backgroundImage: {
-        "footer-hero-pattern": "url('./public/assets/bg-pattern.png')",
+        "footer-hero-pattern": "url('./assets/bg-pattern.png')",
       },
     },
   },

@@ -51,7 +51,7 @@ function FooterHero() {
               className="absolute bottom-[15%] right-[93%] scale-75 lg:right-[100%] lg:scale-100"
               src="../../assets/animated-arrow.gif"
             />
-            <img src="../../public/assets/mobile-mockup-2.png" alt="" />
+            <img src="../../assets/mobile-mockup-2.png" alt="" />
           </div>
         </div>
       </div>
