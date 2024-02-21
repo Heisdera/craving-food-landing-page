@@ -62,7 +62,7 @@ function Navbar() {
             </li>
           </ul>
 
-          <button className="mx-3 rounded-full bg-custom-orange-100 px-7 py-1 text-sm text-white">
+          <button className="hover:bg-opacity- mx-3 rounded-full bg-custom-orange-100 px-7 py-1 text-sm text-white hover:bg-opacity-85">
             Login
           </button>
         </div>
@@ -162,7 +162,7 @@ function Navbar() {
                 </li>
               </ul>
 
-              <button className="mt-6 w-fit rounded-full bg-custom-orange-100 px-7 py-1 text-sm text-white hover:bg-[#ddd] hover:text-custom-orange-100">
+              <button className="mt-6 w-fit rounded-full bg-custom-orange-100 px-7 py-1 text-sm text-white hover:bg-opacity-85">
                 Login
               </button>
             </div>
