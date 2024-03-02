@@ -3,12 +3,12 @@ function RestaurantCard({ restaurant, displayItemsLength }) {
 
   return (
     <div
-      className={`rounded-lg duration-200 ${displayItemsLength === 4 && "lg:last-of-type:hidden"} group hover:scale-[1.02] md:bg-white md:p-3 md:shadow-md`}
+      className={`rounded-lg duration-200 ${displayItemsLength === 4 && "lg:last-of-type:hidden"} group transition-all duration-300 hover:scale-[1.02] md:bg-white md:p-3 md:shadow-md`}
     >
       <div className="flex flex-col gap-2 md:border-b md:border-[#eee] md:pb-3">
         <div className="relative">
           <img className="w-full" src={image} alt={name} />
-          <div className="absolute top-0 z-10 h-full w-full rounded-md bg-[#000] opacity-10 hover:opacity-0 group-hover:opacity-0 md:bg-none"></div>
+          <div className="absolute top-0 z-10 h-full w-full rounded-md bg-[#000] opacity-10 transition-all duration-300 hover:opacity-0 group-hover:opacity-0 md:bg-none"></div>
         </div>
 
         <h3 className="hidden pt-2 font-semibold leading-none tracking-wide md:!block">

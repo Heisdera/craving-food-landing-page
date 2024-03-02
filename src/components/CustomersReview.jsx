@@ -1,7 +1,9 @@
+import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { data } from "../data/customersReviewsData";
+import { fadeIn } from "../utils/variants";
 
 function PrevArrow(props) {
   const { className, style, onClick } = props;
@@ -81,13 +83,30 @@ function CustomersReview() {
 
   return (
     <section className="w-full pb-3 pt-10">
-      <h2 className="text-center text-xl font-extrabold">What customer says</h2>
-      <p className="mx-auto w-[80%] pb-6 text-center text-sm">
+      <motion.h2
+        variants={fadeIn("left", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="text-center text-xl font-extrabold"
+      >
+        What customer says
+      </motion.h2>
+      <motion.p
+        variants={fadeIn("left", 0.4)}
+        initial="hidden"
+        whileInView="show"
+        className="mx-auto w-[80%] pb-6 text-center text-sm"
+      >
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione illo
         dolorem vitae aliquam exercitationem.
-      </p>
+      </motion.p>
 
-      <div className="flex h-[230px] flex-col gap-3 overflow-hidden">
+      <motion.div
+        variants={fadeIn("left", 0.5)}
+        initial="hidden"
+        whileInView="show"
+        className="flex h-[230px] flex-col gap-3 overflow-hidden"
+      >
         <Slider {...settings}>
           {data.map((review) => (
             <div key={review.id}>
@@ -112,7 +131,7 @@ function CustomersReview() {
             </div>
           ))}
         </Slider>
-      </div>
+      </motion.div>
     </section>
   );
 }

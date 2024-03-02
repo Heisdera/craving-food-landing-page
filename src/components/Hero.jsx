@@ -8,17 +8,10 @@ function Hero() {
         <div className="self-center">
           <div className="flex flex-col gap-3 pt-7 sm:w-[90%] md:pt-0 lg:w-[80%] xl:w-[70%]">
             <motion.div
-              initial={{
-                x: "-100vw",
-              }}
-              animate={{
-                x: 0,
-              }}
-              transition={{
-                type: "tween",
-                duration: 0.3,
-              }}
-              className="flex w-fit items-center justify-center gap-1 rounded-md bg-orange-50 px-2 py-1 text-sm text-custom-orange-100"
+              variants={fadeIn("left", 0.3)}
+              initial="hidden"
+              whileInView="show"
+              className="flex w-fit items-center justify-center gap-1 rounded-md bg-orange-100 px-2 py-1 text-sm text-custom-orange-100"
             >
               <p>Fast food delivery</p>
               <img src="../../assets/emoji-fire.png" alt="" />
@@ -26,16 +19,9 @@ function Hero() {
             </motion.div>
 
             <motion.h1
-              initial={{
-                x: "-100vw",
-              }}
-              animate={{
-                x: 0,
-              }}
-              transition={{
-                type: "tween",
-                duration: 0.4,
-              }}
+              variants={fadeIn("left", 0.4)}
+              initial="hidden"
+              whileInView="show"
               className="text-3xl font-extrabold lg:text-4xl xl:text-[42px] xl:leading-[1.1]"
             >
               Enjoy Fresh Food in Your{" "}
@@ -45,16 +31,9 @@ function Hero() {
             </motion.h1>
 
             <motion.p
-              initial={{
-                x: "-100vw",
-              }}
-              animate={{
-                x: 0,
-              }}
-              transition={{
-                type: "tween",
-                duration: 0.5,
-              }}
+              variants={fadeIn("left", 0.5)}
+              initial="hidden"
+              whileInView="show"
               className="pb-1 pt-2 text-sm xl:text-base"
             >
               Our commitment is to provide you with a menu that only satisfies
@@ -62,16 +41,9 @@ function Hero() {
             </motion.p>
 
             <motion.div
-              initial={{
-                x: "-100vw",
-              }}
-              animate={{
-                x: 0,
-              }}
-              transition={{
-                type: "tween",
-                duration: 0.6,
-              }}
+              variants={fadeIn("left", 0.6)}
+              initial="hidden"
+              whileInView="show"
               className="flex gap-3 pb-2"
             >
               <button className="flex w-fit items-center gap-2 rounded-md bg-custom-black-100 px-3 py-1 text-white">
@@ -100,16 +72,9 @@ function Hero() {
             </motion.div>
 
             <motion.div
-              initial={{
-                x: "-100vw",
-              }}
-              animate={{
-                x: 0,
-              }}
-              transition={{
-                type: "tween",
-                duration: 0.7,
-              }}
+              variants={fadeIn("left", 0.7)}
+              initial="hidden"
+              whileInView="show"
               className="flex gap-4"
             >
               <span className="text-[12px] tracking-wide">13k reviews</span>
@@ -125,35 +90,33 @@ function Hero() {
         </div>
 
         <div className="relative flex justify-center pt-[50px] md:pt-[80px]">
-          <img
-            className="absolute right-[-15px] top-[-10px] rotate-[135deg] scale-75 sm:top-[40%] md:right-[90%] md:top-[50%] md:rotate-0 lg:right-[110%] lg:top-[55%] lg:scale-100"
-            src="../../assets/animated-arrow.gif"
-          />
+          <motion.div
+            variants={fadeIn("appear", 0.8)}
+            initial="hidden"
+            whileInView="show"
+          >
+            <img
+              className="absolute right-[-15px] top-[-10px] rotate-[135deg] scale-75 sm:top-[40%] md:right-[90%] md:top-[50%] md:rotate-0 lg:right-[110%] lg:top-[55%] lg:scale-100"
+              src="../../assets/animated-arrow.gif"
+            />
+          </motion.div>
 
-          <img
+          <motion.img
+            variants={fadeIn("appear", 1.5)}
+            initial="hidden"
+            animate="scale"
             className="absolute bottom-[83%] right-[7%] w-[12px] scale-[3] animate-pulse sm:bottom-[15%] sm:right-[90%] md:right-[115%]"
             src="../../assets/group-sparkles.png"
             alt=""
           />
 
-          <motion.div
-            // variants={fadeIn("right", 1)}
-            // initial="hidden"
-            // whileInView="show"
-            initial={{
-              x: "100vw",
-            }}
-            animate={{
-              x: 0,
-            }}
-            transition={{
-              type: "tween",
-              duration: 0.7,
-            }}
-            // viewport={{ once: false, amount: 0.7 }}
-          >
-            <img src="../../assets/mobile-mockup-1.png" alt="" />
-          </motion.div>
+          <motion.img
+            variants={fadeIn("right", 0.7)}
+            initial="hidden"
+            whileInView="show"
+            src="../../assets/mobile-mockup-1.png"
+            alt=""
+          />
         </div>
       </div>
     </section>

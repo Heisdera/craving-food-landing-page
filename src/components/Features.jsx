@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { fadeIn } from "../utils/variants";
 
 function Features() {
   return (
@@ -10,7 +12,13 @@ function Features() {
       </p>
 
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-        <div className="flex flex-col gap-1 rounded-md border border-[#dddd] p-3">
+        <motion.div
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-col gap-1 rounded-md border border-[#dddd] p-3"
+        >
           <div className="flex flex-col rounded-lg bg-primary-color md:px-4 md:py-8">
             <div className="rounded-lg bg-white md:px-3 md:py-4">
               <h4 className="font-mediun text-[15px]">Order Details</h4>
@@ -75,9 +83,15 @@ function Features() {
               portion sizes, and make your meal truly yours.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-[6px] rounded-md border border-[#dddd] p-3">
+        <motion.div
+          variants={fadeIn("up", 0.6)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-col gap-[6px] rounded-md border border-[#dddd] p-3"
+        >
           <div className="h-full rounded-lg md:flex md:h-[276px] md:items-center md:bg-primary-color md:px-4 md:py-10">
             <span className="text-sm font-medium tracking-wide md:hidden">
               Track Order
@@ -112,9 +126,15 @@ function Features() {
               doorstep. Real-time updates ensure you&apos;re always in the loop.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-[6px] rounded-md border border-[#dddd] md:col-span-2 md:p-3 lg:col-span-1">
+        <motion.div
+          variants={fadeIn("up", 0.8)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-col gap-[6px] rounded-md border border-[#dddd] md:col-span-2 md:p-3 lg:col-span-1"
+        >
           <div className="flex flex-col rounded-lg md:flex-row md:gap-3 md:bg-primary-color md:px-4 md:pb-3 md:pt-8 lg:flex-col">
             <div className="mx-2 flex items-center gap-[10px] border-b bg-white px-2 py-4 md:mx-0 md:w-1/2 md:rounded-lg md:py-0 lg:w-full">
               <div className="relative">
@@ -162,7 +182,7 @@ function Features() {
               appreciate how good the food was for you.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
