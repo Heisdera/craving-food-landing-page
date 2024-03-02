@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [activeNav, setActiveNav] = useState("home");
   const [nav, setNav] = useState(false);
   const ref = useRef(null);
+  const text = "Craving".split("");
 
   useEffect(function () {
     function handleOutsideClick(e) {
@@ -30,9 +32,23 @@ function Navbar() {
   return (
     <nav className="sticky top-0 z-30 w-full bg-white">
       <div className="mx-auto flex h-[68px] max-w-[1290px] items-center justify-between gap-40 px-6 pb-4 pt-10 backdrop-blur-sm">
-        <p className="text-2xl font-bold" role="banner">
-          Craving
-        </p>
+        <div className="flex">
+          {text.map((letter, i) => (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.25,
+                delay: i / 10,
+              }}
+              key={i}
+              className="text-2xl font-bold"
+              role="banner"
+            >
+              {letter}
+            </motion.p>
+          ))}
+        </div>
 
         <div className="hidden w-[700px] items-center justify-between md:!flex">
           <ul className="flex gap-12">

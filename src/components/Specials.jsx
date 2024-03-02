@@ -2,7 +2,7 @@ function Specials() {
   return (
     <div className="px-4 sm:px-7">
       <div
-        className="hide-scrollbar mx-auto max-w-[1225px] overflow-x-scroll"
+        className="hide-scrollbar mx-auto max-w-[1225px] overflow-x-scroll scroll-smooth"
         style={{
           scrollBehavior: "smooth",
           scrollbarWidth: "none",

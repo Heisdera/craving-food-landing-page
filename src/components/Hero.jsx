@@ -1,28 +1,79 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/variants";
+
 function Hero() {
   return (
     <section className="px-4 sm:px-7">
       <div className="mx-auto mt-[25px] flex max-w-[1225px] flex-col justify-between rounded-2xl bg-primary-color pl-5 pr-5 pt-2 md:flex-row md:pl-12 md:pr-20">
         <div className="self-center">
           <div className="flex flex-col gap-3 pt-7 sm:w-[90%] md:pt-0 lg:w-[80%] xl:w-[70%]">
-            <div className="flex w-fit items-center justify-center gap-1 rounded-md bg-orange-50 px-2 py-1 text-sm text-custom-orange-100">
+            <motion.div
+              initial={{
+                x: "-100vw",
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                type: "tween",
+                duration: 0.3,
+              }}
+              className="flex w-fit items-center justify-center gap-1 rounded-md bg-orange-50 px-2 py-1 text-sm text-custom-orange-100"
+            >
               <p>Fast food delivery</p>
               <img src="../../assets/emoji-fire.png" alt="" />
               <img src="../../assets/emoji-rocket.png" alt="" />
-            </div>
+            </motion.div>
 
-            <h1 className="text-3xl font-extrabold lg:text-4xl xl:text-[42px] xl:leading-[1.1]">
+            <motion.h1
+              initial={{
+                x: "-100vw",
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                type: "tween",
+                duration: 0.4,
+              }}
+              className="text-3xl font-extrabold lg:text-4xl xl:text-[42px] xl:leading-[1.1]"
+            >
               Enjoy Fresh Food in Your{" "}
               <span className="inline text-custom-orange-100">
                 Healthy Life
               </span>
-            </h1>
+            </motion.h1>
 
-            <p className="pb-1 pt-2 text-sm xl:text-base">
+            <motion.p
+              initial={{
+                x: "-100vw",
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                type: "tween",
+                duration: 0.5,
+              }}
+              className="pb-1 pt-2 text-sm xl:text-base"
+            >
               Our commitment is to provide you with a menu that only satisfies
               your taste buds but also contributes to your overall well-being.
-            </p>
+            </motion.p>
 
-            <div className="flex gap-3 pb-2">
+            <motion.div
+              initial={{
+                x: "-100vw",
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                type: "tween",
+                duration: 0.6,
+              }}
+              className="flex gap-3 pb-2"
+            >
               <button className="flex w-fit items-center gap-2 rounded-md bg-custom-black-100 px-3 py-1 text-white">
                 <img src="../../assets/apple.svg" alt="" />
 
@@ -46,9 +97,21 @@ function Hero() {
                   </span>
                 </p>
               </button>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4">
+            <motion.div
+              initial={{
+                x: "-100vw",
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                type: "tween",
+                duration: 0.7,
+              }}
+              className="flex gap-4"
+            >
               <span className="text-[12px] tracking-wide">13k reviews</span>
 
               <div className="flex gap-[2px]">
@@ -57,7 +120,7 @@ function Hero() {
                 <img src="../../assets/star.svg" alt="" />
                 <img src="../../assets/star.svg" alt="" />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -73,7 +136,24 @@ function Hero() {
             alt=""
           />
 
-          <img src="../../assets/mobile-mockup-1.png" alt="" />
+          <motion.div
+            // variants={fadeIn("right", 1)}
+            // initial="hidden"
+            // whileInView="show"
+            initial={{
+              x: "100vw",
+            }}
+            animate={{
+              x: 0,
+            }}
+            transition={{
+              type: "tween",
+              duration: 0.7,
+            }}
+            // viewport={{ once: false, amount: 0.7 }}
+          >
+            <img src="../../assets/mobile-mockup-1.png" alt="" />
+          </motion.div>
         </div>
       </div>
     </section>
