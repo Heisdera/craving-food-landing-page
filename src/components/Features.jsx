@@ -15,7 +15,7 @@ function Features() {
         <motion.div
           variants={fadeIn("up", 0.4)}
           initial="hidden"
-          whileInView="show"
+          whileInView="visible"
           viewport={{ once: true }}
           className="flex flex-col gap-1 rounded-md border border-[#dddd] p-3"
         >
@@ -88,7 +88,7 @@ function Features() {
         <motion.div
           variants={fadeIn("up", 0.6)}
           initial="hidden"
-          whileInView="show"
+          whileInView="visible"
           viewport={{ once: true }}
           className="flex flex-col gap-[6px] rounded-md border border-[#dddd] p-3"
         >
@@ -131,7 +131,7 @@ function Features() {
         <motion.div
           variants={fadeIn("up", 0.8)}
           initial="hidden"
-          whileInView="show"
+          whileInView="visible"
           viewport={{ once: true }}
           className="flex flex-col gap-[6px] rounded-md border border-[#dddd] md:col-span-2 md:p-3 lg:col-span-1"
         >

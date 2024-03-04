@@ -5,7 +5,7 @@ export function fadeIn(direction, customDelay) {
       y: direction === "up" ? 40 : direction === "down" ? -40 : 0,
       opacity: 0,
     },
-    show: {
+    visible: {
       x: 0,
       y: 0,
       opacity: 1,
@@ -31,17 +31,24 @@ export function fadeIn(direction, customDelay) {
   };
 }
 
-export function slideIn(direction) {
+export function populate(i) {
   return {
     hidden: {
-      x: direction === "left" ? "-100vw" : direction === "right" ? "100vw" : 0,
-      opacity: 1,
+      x: 30,
+      y: 30,
+      opacity: 0,
+      scale: 0.8
     },
-    show: {
+    visible: {
       x: 0,
+      y: 0,
       opacity: 1,
+      scale: 1,
       transition: {
         duration: 0.4,
+        delay: i / 10,
+        type: "tween",
+        ease: "linear",
       },
     },
   };

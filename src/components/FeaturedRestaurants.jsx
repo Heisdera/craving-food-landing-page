@@ -34,10 +34,11 @@ function FeaturedRestaurants() {
       </div>
 
       <div className="grid grid-cols-2 gap-x-[4px] gap-y-[3px] sm:grid-cols-2 md:gap-x-4 md:gap-y-4 lg:grid-cols-3 lg:gap-x-9 lg:gap-y-5">
-        {displayItems.map((restaurant) => (
+        {displayItems.map((restaurant, index) => (
           <RestaurantCard
             key={restaurant.id}
             restaurant={restaurant}
+            i={index}
             displayItemsLength={displayItemsLength}
           />
         ))}

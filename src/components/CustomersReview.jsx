@@ -86,7 +86,7 @@ function CustomersReview() {
       <motion.h2
         variants={fadeIn("left", 0.3)}
         initial="hidden"
-        whileInView="show"
+        whileInView="visible"
         className="text-center text-xl font-extrabold"
       >
         What customer says
@@ -94,7 +94,7 @@ function CustomersReview() {
       <motion.p
         variants={fadeIn("left", 0.4)}
         initial="hidden"
-        whileInView="show"
+        whileInView="visible"
         className="mx-auto w-[80%] pb-6 text-center text-sm"
       >
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione illo
@@ -104,7 +104,7 @@ function CustomersReview() {
       <motion.div
         variants={fadeIn("left", 0.5)}
         initial="hidden"
-        whileInView="show"
+        whileInView="visible"
         className="flex h-[230px] flex-col gap-3 overflow-hidden"
       >
         <Slider {...settings}>
