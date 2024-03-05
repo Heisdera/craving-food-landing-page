@@ -37,7 +37,7 @@ export function populate(i) {
       x: 30,
       y: 30,
       opacity: 0,
-      scale: 0.8
+      scale: 0.8,
     },
     visible: {
       x: 0,
@@ -53,3 +53,7 @@ export function populate(i) {
     },
   };
 }
+
+// export const menuSlide = {
+//   {}
+// }
