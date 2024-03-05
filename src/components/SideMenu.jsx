@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { menuSlide, pop, slide } from "../utils/variants";
 
 function SideMenu({ nav, activeNav, handleActiveNav }) {
   const navItems = [
@@ -21,29 +22,37 @@ function SideMenu({ nav, activeNav, handleActiveNav }) {
   ];
 
   return (
-    <motion.div>
-      <div
-        className={`${nav ? "fixed right-0 top-0 flex h-screen w-[280px] flex-col gap-8 bg-primary-color px-6 pt-[27px] ease-in-out md:hidden" : "fixed top-0 hidden h-screen w-[280px] gap-8 bg-primary-color px-4 pt-6 duration-500 ease-in-out md:hidden"}`}
-      >
-        <div className="px-2 py-20">
-          <ul className="flex flex-col divide-y divide-[#e5e5e5]">
+    <AnimatePresence>
+      {nav && (
+        <motion.div
+          variants={menuSlide}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="fixed right-0 top-0 h-screen w-[260px] bg-primary-color px-6 pt-[100px]"
+        >
+          <ul className="flex flex-col divide-y divide-[#e5e5e5] px-2">
             {navItems.map(({ title, nav }, i) => (
-              <li
+              <motion.li
+                variants={slide(i)}
                 key={nav}
                 className={`${activeNav === nav && "text-custom-orange-50"} cursor-pointer py-2 text-xl hover:text-custom-orange-50`}
                 onClick={() => handleActiveNav(nav)}
               >
                 {title}
-              </li>
+              </motion.li>
             ))}
           </ul>
 
-          <button className="mt-7 w-fit rounded-full bg-custom-orange-100 px-7 py-1 text-white hover:bg-opacity-85">
+          <motion.button
+            variants={pop}
+            className="mt-7 w-fit rounded-full bg-custom-orange-100 px-7 py-1 text-white hover:bg-opacity-85"
+          >
             Login
-          </button>
-        </div>
-      </div>
-    </motion.div>
+          </motion.button>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 

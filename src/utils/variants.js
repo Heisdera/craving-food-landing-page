@@ -54,6 +54,76 @@ export function populate(i) {
   };
 }
 
-// export const menuSlide = {
-//   {}
-// }
+export const menuSlide = {
+  hidden: {
+    x: "50vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+  exit: {
+    x: "50vw",
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+export function slide(i) {
+  return {
+    hidden: {
+      x: 40,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 0.6,
+        stiffness: 100,
+        delay: i / 10,
+      },
+    },
+    exit: {
+      x: 20,
+      opacity: 0.2,
+      transition: {
+        type: "spring",
+        duration: 0.4,
+        stiffness: 100,
+        delay: i / 20,
+      },
+    },
+  };
+}
+
+export const pop = {
+  hidden: {
+    opacity: 0,
+    scale: 0,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      duration: 0.3,
+      delay: 0.4,
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.6,
+    transition: {
+      duration: 0.3,
+      delay: 0.1,
+    },
+  },
+};
