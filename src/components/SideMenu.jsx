@@ -1,23 +1,24 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { menuSlide, pop, slide } from "../utils/variants";
+import { Link } from "react-scroll";
 
-function SideMenu({ nav, activeNav, handleActiveNav }) {
+function SideMenu({ nav, activeNav, handleActiveNav, toggleNav }) {
   const navItems = [
     {
-      title: "Home",
-      nav: "home",
+      link: "Home",
+      path: "home",
     },
     {
-      title: "Features",
-      nav: "features",
+      link: "Features",
+      path: "features",
     },
     {
-      title: "Groceries",
-      nav: "groceries",
+      link: "Groceries",
+      path: "groceries",
     },
     {
-      title: "Contact us",
-      nav: "contact",
+      link: "Contact us",
+      path: "contact",
     },
   ];
 
@@ -32,14 +33,26 @@ function SideMenu({ nav, activeNav, handleActiveNav }) {
           className="fixed right-0 top-0 h-screen w-[260px] bg-primary-color px-6 pt-[100px]"
         >
           <ul className="flex flex-col divide-y divide-[#e5e5e5] px-2">
-            {navItems.map(({ title, nav }, i) => (
+            {navItems.map(({ link, path }, i) => (
               <motion.li
                 variants={slide(i)}
-                key={nav}
-                className={`${activeNav === nav && "text-custom-orange-50"} cursor-pointer py-2 text-xl hover:text-custom-orange-50`}
-                onClick={() => handleActiveNav(nav)}
+                key={path}
+                className={`${activeNav === path && "text-custom-orange-50"} cursor-pointer py-2 text-xl hover:text-custom-orange-50`}
               >
-                {title}
+                <Link
+                  to={path}
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  className="flex"
+                  onClick={() => {
+                    handleActiveNav(path);
+                    toggleNav();
+                  }}
+                >
+                  {link}
+                </Link>
               </motion.li>
             ))}
           </ul>

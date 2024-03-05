@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import SideMenu from "./SideMenu";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [activeNav, setActiveNav] = useState("home");
@@ -31,6 +32,25 @@ function Navbar() {
     setNav((show) => !show);
   }
 
+  const navItems = [
+    {
+      link: "Home",
+      path: "home",
+    },
+    {
+      link: "Features",
+      path: "features",
+    },
+    {
+      link: "Groceries",
+      path: "groceries",
+    },
+    {
+      link: "Contact us",
+      path: "contact",
+    },
+  ];
+
   return (
     <nav className="sticky top-0 z-30 w-full bg-white">
       <div className="mx-auto flex h-[68px] max-w-[1290px] items-center justify-between gap-40 px-6 pt-3 backdrop-blur-sm">
@@ -54,30 +74,20 @@ function Navbar() {
 
         <div className="hidden w-[700px] items-center justify-between md:!flex">
           <ul className="flex gap-12">
-            <li
-              className={`${activeNav === "home" && "text-custom-orange-50"} cursor-pointer text-sm hover:text-custom-orange-50`}
-              onClick={() => handleActiveNav("home")}
-            >
-              Home
-            </li>
-            <li
-              className={`${activeNav === "features" && "text-custom-orange-50"} cursor-pointer text-sm hover:text-custom-orange-50`}
-              onClick={() => handleActiveNav("features")}
-            >
-              Features
-            </li>
-            <li
-              className={`${activeNav === "groceries" && "text-custom-orange-50"} cursor-pointer text-sm hover:text-custom-orange-50`}
-              onClick={() => handleActiveNav("groceries")}
-            >
-              Groceries
-            </li>
-            <li
-              className={`${activeNav === "contact" && "text-custom-orange-50"} cursor-pointer whitespace-nowrap text-sm hover:text-custom-orange-50`}
-              onClick={() => handleActiveNav("contact")}
-            >
-              Contact us
-            </li>
+            {navItems.map(({ link, path }) => (
+              <Link
+                key={path}
+                to={path}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                className={`${activeNav === path && "text-custom-orange-50"} cursor-pointer whitespace-nowrap text-sm hover:text-custom-orange-50`}
+                onClick={() => handleActiveNav(path)}
+              >
+                {link}
+              </Link>
+            ))}
           </ul>
 
           <button className="hover:bg-opacity- mx-3 rounded-full bg-custom-orange-100 px-7 py-1 text-sm text-white hover:bg-opacity-85">
@@ -91,6 +101,7 @@ function Navbar() {
             nav={nav}
             activeNav={activeNav}
             handleActiveNav={handleActiveNav}
+            toggleNav={handleToggleNav}
           />
         </div>
       </div>

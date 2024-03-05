@@ -14,7 +14,7 @@ function FeaturedRestaurants() {
   const displayItemsLength = displayItems.length;
 
   return (
-    <section className="mx-auto max-w-[1225px] bg-primary-color px-4 py-12 sm:px-7">
+    <section className="mx-auto max-w-[1225px] bg-primary-color px-4 py-12 sm:px-7" id="groceries">
       <div className="flex items-center justify-between pb-6">
         <h2 className="w-[50%] text-xl font-extrabold lg:w-[15%]">
           Our featured restaurant <span className="md:hidden">dishes</span>

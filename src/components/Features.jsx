@@ -4,7 +4,10 @@ import { fadeIn } from "../utils/variants";
 
 function Features() {
   return (
-    <section className="mx-auto max-w-[1225px] px-4 py-10 sm:px-7 md:pb-24 md:pt-16">
+    <section
+      className="mx-auto max-w-[1225px] px-4 py-10 sm:px-7 md:pb-24 md:pt-16"
+      id="features"
+    >
       <h2 className="text-center text-xl font-extrabold">Our Features</h2>
       <p className="pb-6 text-center text-sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam

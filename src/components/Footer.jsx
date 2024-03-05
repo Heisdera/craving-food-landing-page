@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/variants";
 
 function currentYear() {
   const year = new Date().getFullYear();
@@ -11,7 +10,10 @@ function Footer() {
   const text = "Craving".split("");
 
   return (
-    <footer className="w-full bg-[#262626] px-4 py-4 text-[#f9fdfe] sm:px-7 md:bg-white md:py-6 md:text-custom-black-100">
+    <footer
+      className="w-full bg-[#262626] px-4 py-4 text-[#f9fdfe] sm:px-7 md:bg-white md:py-6 md:text-custom-black-100"
+      id="contact"
+    >
       <div className="mx-auto flex max-w-[1050px] flex-col tracking-wider">
         <div className="flex flex-col justify-between gap-5 border-b-2 border-[#eee] py-3 tracking-wider md:flex-row md:border-custom-black-50">
           <div className="flex justify-between md:flex-col">
