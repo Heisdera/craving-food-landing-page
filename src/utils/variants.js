@@ -62,6 +62,9 @@ export const menuSlide = {
   visible: {
     x: 0,
     height: "100dvh",
+    position: "fixed",
+    top: 0,
+    right: 0,
     transition: {
       duration: 0.8,
       ease: "easeOut",
@@ -70,6 +73,9 @@ export const menuSlide = {
   exit: {
     x: "100vw",
     height: "100dvh",
+    position: "fixed",
+    top: 0,
+    right: 0,
     transition: {
       duration: 0.8,
       ease: "easeOut",

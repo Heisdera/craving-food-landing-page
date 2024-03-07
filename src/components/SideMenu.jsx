@@ -30,7 +30,7 @@ function SideMenu({ nav, activeNav, handleActiveNav, toggleNav }) {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="fixed right-0 top-0 w-[260px] bg-primary-color px-6 pt-[100px]"
+          className="fixed right-0 top-0 h-dvh w-[260px] bg-primary-color px-6 pt-[100px]"
         >
           <ul className="flex flex-col divide-y divide-[#e5e5e5] px-2">
             {navItems.map(({ link, path }, i) => (
