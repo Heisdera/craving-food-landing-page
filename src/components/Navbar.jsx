@@ -52,8 +52,8 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 z-30 h-[68px] w-full bg-white">
-      <div className="mx-auto flex max-w-[1290px] items-center justify-between gap-40 px-6 pt-3 backdrop-blur-sm">
+    <nav className="fixed top-0 z-30 w-full bg-white">
+      <div className="mx-auto flex h-[68px] max-w-[1290px] items-center justify-between gap-40 px-6 pt-3 backdrop-blur-sm">
         <div className="flex">
           {text.map((letter, i) => (
             <motion.p
