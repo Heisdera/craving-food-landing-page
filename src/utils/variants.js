@@ -56,19 +56,21 @@ export function populate(i) {
 
 export const menuSlide = {
   hidden: {
-    x: "50vw",
+    // x: "calc(100% + 50vw)",
+    x: "100vw",
   },
   visible: {
     x: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.8,
       ease: "easeOut",
     },
   },
   exit: {
-    x: "50vw",
+    // x: "calc(100% + 50vw)",
+    x: "100vw",
     transition: {
-      duration: 0.6,
+      duration: 0.8,
       ease: "easeOut",
     },
   },
@@ -78,7 +80,7 @@ export function slide(i) {
   return {
     hidden: {
       x: 40,
-      opacity: 0,
+      opacity: 0.4,
     },
     visible: {
       x: 0,
@@ -87,7 +89,7 @@ export function slide(i) {
         type: "spring",
         duration: 0.6,
         stiffness: 100,
-        delay: i / 10,
+        delay: i / 5,
       },
     },
     exit: {
@@ -97,7 +99,7 @@ export function slide(i) {
         type: "spring",
         duration: 0.4,
         stiffness: 100,
-        delay: i / 20,
+        delay: i / 10,
       },
     },
   };
@@ -115,7 +117,7 @@ export const pop = {
       type: "spring",
       stiffness: 100,
       duration: 0.3,
-      delay: 0.4,
+      delay: 0.6,
     },
   },
   exit: {
