@@ -56,19 +56,20 @@ export function populate(i) {
 
 export const menuSlide = {
   hidden: {
-    // x: "calc(100% + 50vw)",
     x: "100vw",
+    height: "100dvh",
   },
   visible: {
     x: 0,
+    height: "100dvh",
     transition: {
       duration: 0.8,
       ease: "easeOut",
     },
   },
   exit: {
-    // x: "calc(100% + 50vw)",
     x: "100vw",
+    height: "100dvh",
     transition: {
       duration: 0.8,
       ease: "easeOut",
