@@ -77,7 +77,7 @@ export const menuSlide = {
     top: 0,
     right: 0,
     transition: {
-      duration: 0.8,
+      duration: 1,
       ease: "easeOut",
     },
   },
