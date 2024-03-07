@@ -3,8 +3,8 @@ import { fadeIn } from "../utils/variants";
 
 function Hero() {
   return (
-    <section className="px-4 sm:px-7" id="home">
-      <div className="mx-auto mt-[10px] flex max-w-[1225px] flex-col justify-between rounded-2xl bg-primary-color pl-5 pr-5 pt-2 md:flex-row md:pl-12 md:pr-20">
+    <section className="mt-[68px] px-4 sm:px-7" id="home">
+      <div className="mx-auto flex max-w-[1225px] flex-col justify-between rounded-2xl bg-primary-color pl-5 pr-5 pt-2 md:flex-row md:pl-12 md:pr-20">
         <div className="self-center">
           <div className="flex flex-col gap-3 pt-7 sm:w-[90%] md:pt-0 lg:w-[80%] xl:w-[70%]">
             <motion.div
